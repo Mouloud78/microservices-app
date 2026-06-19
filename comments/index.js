@@ -6,12 +6,13 @@ const bodyParser = require("body-parser");
 
 // Importe la fonction randomBytes du module crypto pour générer des identifiants aléatoires
 const { randomBytes } = require("crypto");
-
+const cors = require("cors");
 // Crée une instance de l'application Express
 const app = express();
 
 // Configure Express pour analyser automatiquement les corps de requêtes au format JSON
 app.use(bodyParser.json());
+app.use(cors());
 
 // Objet qui stocke les commentaires regroupés par identifiant de post
 // Exemple :
