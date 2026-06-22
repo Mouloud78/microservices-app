@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.post("/events", async (req, res) => {
   const event = req.body;
 
-  const services = [4000, 4001, 4002];
+  const services = [4000, 4001, 4002, 4003];
 
   for (const port of services) {
     try {
